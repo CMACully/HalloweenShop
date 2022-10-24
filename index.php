@@ -24,6 +24,8 @@ if($logout){
 <?php
     
     include "Model/dbinfo.php";
-    include "view/orderForm.php";
     $goodies = getSpoopyItems();
+    include "view/orderForm.php";
+    include "view/cauldron.php";
+    
 ?>
