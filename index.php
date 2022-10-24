@@ -25,9 +25,29 @@ if($logout){
     
     include "Model/dbinfo.php";
     $goodies = getSpoopyItems();
-    include "view/orderForm.php";
-    include "view/cauldron.php";
-    include "view/bonehilda.php";
-    include "view/ghostcookie.php";
+    $action = filter_input(INPUT_POST, "submit");
+    echo($action);
+    switch($action)
+    {
+        
+        case "Cauldron":
+            include "view/cauldron.php";
+            break;
+        case "Bonehilda":
+            include "view/bonehilda.php";
+            break;
+        case "Ghost Cookie":
+            include "view/ghostcookie.php";
+            break;
+        case "Witch Soup":
+            include "view/witchsoup.php";
+            break;
+        case "Vampire Latte":
+            include "view/vampirelatte.php";
+            break;
+        default:
+            include "view/orderForm.php";
+    }
+    
     
 ?>
