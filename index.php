@@ -27,6 +27,7 @@ if($logout){
     $goodies = getSpoopyItems();
     $action = filter_input(INPUT_POST, "submit");
     echo($action);
+    include "view/cauldron.php";
     switch($action)
     {
         

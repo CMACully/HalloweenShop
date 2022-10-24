@@ -6,13 +6,14 @@
     
 ?>
 
-<form action="." method="post">
-    <label>Item: <?php echo($itemName);?></label>
-    <label>Price: $<?php echo($itemPrice);?></label>
-    <label>Description: <?php echo($itemDescription);?></label>
-    <?php echo("<img src='images/$itemImg' alt=''>")?>
-
-    <label>Quantity:</label>
+<form style="max-width:600px; margin: 0 auto; padding-top:25px;" action="." method="post">
+    <div class='card' style='width: 450px; margin: 0 auto;'>
+        <div class='card-body'>
+            <?php echo("<img src='images/$itemImg' alt=''>")?>
+            <p class='card-title'>Spoopy Item: <?php echo($itemName);?></p>
+            <p class='card-text'>Price: $<?php echo($itemPrice);?></p>
+            <p class='card-text'>Description: <?php echo($itemDescription);?></p>
+            <label>Quantity:</label>
             <select name="itemqty">
             <?php for($i = 1; $i <= 10; $i++) : ?>
                 <option value="<?php echo $i; ?>">
@@ -20,5 +21,7 @@
                 </option>
             <?php endfor; ?>
             </select><br>
-    <input type="submit" value="Add Item">
+            <input type="submit" value="Add Item">
+        </div>
+    </div>
 </form>
