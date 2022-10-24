@@ -27,5 +27,7 @@ if($logout){
     $goodies = getSpoopyItems();
     include "view/orderForm.php";
     include "view/cauldron.php";
+    include "view/bonehilda.php";
+    include "view/ghostcookie.php";
     
 ?>

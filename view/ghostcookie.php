@@ -1,8 +1,8 @@
 <?php
-    $itemName = $goodies[1][1];
-    $itemPrice = $goodies[1][2];
-    $itemDescription = $goodies[1][3];
-    $itemImg = $goodies[1][4];
+    $itemName = $goodies[2][1];
+    $itemPrice = $goodies[2][2];
+    $itemDescription = $goodies[2][3];
+    $itemImg = $goodies[2][4];
     
 ?>
 

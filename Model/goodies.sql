@@ -41,9 +41,9 @@ CREATE TABLE `goodies` (
 
 INSERT INTO `goodies` (`ItemID`, `Item`, `Itemprice`, `Itemdescription`, `Itemimg`) VALUES
 (1, 'Cauldron ', 1000, 'This is Winifreds cauldron.', 'cauldron.png'),
-(2, 'Witch Soup ', 25, 'Favorite witch food giving them mysterious powers.', 'soup.png'),
-(5, 'Vampire Latte ', 50, 'It\'s like a bloody marry but it tastes like O+. ', 'latte.png'),
-(6, 'Ghost Cookie', 60, 'Don\'t worry the cookie\'s there it\'s a ghost remember?  ', 'ghost.png'),
+(2, 'Witch Soup ', 25, 'Favorite witch food giving them mysterious powers.', 'witchsoup.png'),
+(5, 'Vampire Latte ', 50, 'It\'s like a bloody marry but it tastes like O+. ', 'vampirelatte.png'),
+(6, 'Ghost Cookie', 60, 'Don\'t worry the cookie\'s there it\'s a ghost remember?  ', 'ghostcookie.png'),
 (7, 'Bonehilda', 2000, 'A Skelton maid comes with a coffin and a broom. ', 'bonehilda.png');
 
 --
