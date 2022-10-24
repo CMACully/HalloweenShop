@@ -1,15 +1,16 @@
 <?php
-
    $dsn = "mysql:host=localhost;dbname=halloweenshop";
    $username = "root";
    $password = "";
-   try {
+   try 
+   {
        $db = new PDO($dsn, $username, $password);
        //echo("connected");
-   } catch (PDOException $e){
-       //die(include "404.php");
-       echo("Not connected");
-        
+   } 
+    catch (PDOException $e)
+    {
+    //die(include "404.php");
+    echo("Not connected"); 
    }
 
     function getSpoopyItems()
@@ -20,5 +21,4 @@
         $goodies = $qry->fetchAll();
         return $goodies;
     }
-
 ?>

@@ -31,8 +31,4 @@ if($logout){
         $strgoodie = "${goodie[1]}";
         echo($strgoodie);
     }
-
-    
-?> 
-</body>
-</html>
+?>
