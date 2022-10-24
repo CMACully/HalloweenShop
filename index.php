@@ -22,8 +22,10 @@ if($logout){
 </head>
 <body>
 <?php
-
+    
     include "Model/dbinfo.php";
-    include "view/orderForm.php";
     $goodies = getSpoopyItems();
+    include "view/orderForm.php";
+    include "view/cauldron.php";
+    
 ?>
