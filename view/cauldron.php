@@ -1,8 +1,8 @@
 <?php
-    $itemName = $goodies[0][1];
-    $itemPrice = $goodies[0][2];
-    $itemDescription = $goodies[0][3];
-    $itemImg = $goodies[0][4];
+    $itemName = $goodies[1][1];
+    $itemPrice = $goodies[1][2];
+    $itemDescription = $goodies[1][3];
+    $itemImg = $goodies[1][4];
     
 ?>
 
@@ -11,4 +11,5 @@
     <label>Price: $<?php echo($itemPrice);?></label>
     <label>Description: <?php echo($itemDescription);?></label>
     <?php echo("<img src='images/$itemImg' alt=''>")?>
+    
 </form>
