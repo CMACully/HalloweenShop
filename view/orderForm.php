@@ -5,7 +5,7 @@
     <?php 
         foreach($goodies as $goodie)
         {
-            echo("<option value='${goodie[1]}'>${goodie[2]}</option>");
+            echo("<option value='${goodie[2]}'>${goodie[1]}</option>");
         }
     ?>
     </select><br>
