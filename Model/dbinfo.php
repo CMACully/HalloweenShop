@@ -15,7 +15,7 @@
 
     function getSpoopyItems()
     {
-        $myQuery = "select all * FROM goodies order by item ASC;";
+        $myQuery = "select * FROM goodies order by item ASC;";
         global $db;
         $qry = $db->query($myQuery);       
         $goodies = $qry->fetchAll();
