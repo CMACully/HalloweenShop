@@ -1,5 +1,5 @@
 <?php
-function getSpoopyItems(){
+
    $dsn = "mysql:host=localhost;dbname=halloweenshop";
    $username = "root";
    $password = "";
@@ -14,7 +14,7 @@ function getSpoopyItems(){
 
     function getSpoopyItems()
     {
-        $myQuery = "select all * FROM goodies order by item ASC;";
+        $myQuery = "select * FROM goodies order by item ASC;";
         global $db;
         $qry = $db->query($myQuery);       
         $goodies = $qry->fetchAll();
