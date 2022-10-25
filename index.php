@@ -21,17 +21,23 @@ if($logout){
     <title>Document</title>
 </head>
 <body>
+    <a href="index.php">reset</a>
 <?php
     
     include "Model/dbinfo.php";
     $goodies = getSpoopyItems();
-    $action = filter_input(INPUT_POST, "submit");
-    echo($action);
-    include "view/cauldron.php";
+    if($_POST != null){
+        $action = $_POST["action"];
+    }
+    else{
+        $action = "";
+    }
+    
+    //include "view/cauldron.php";
     switch($action)
     {
         
-        case "Cauldron":
+        case "Cauldron ":
             include "view/cauldron.php";
             break;
         case "Bonehilda":
@@ -40,14 +46,15 @@ if($logout){
         case "Ghost Cookie":
             include "view/ghostcookie.php";
             break;
-        case "Witch Soup":
+        case "Witch Soup ":
             include "view/witchsoup.php";
             break;
-        case "Vampire Latte":
+        case "Vampire Latte ":
             include "view/vampirelatte.php";
             break;
         default:
             include "view/orderForm.php";
+
     }
     
     
