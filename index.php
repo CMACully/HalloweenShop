@@ -10,7 +10,9 @@ if($logout){
     session_regenerate_id(true);
         
 }
-
+if(empty($_SESSION['cart'])){
+    $_SESSION = array();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +38,12 @@ if($logout){
     //include "view/cauldron.php";
     switch($action)
     {
-        
+        case "add":
+            $itemID = filter_input(INPUT_POST, "id");
+            $itemqty = filter_input(INPUT_POST, "itemqty");
+            addItems($itemID, $itemqty);
+            include "view/cartview.php";
+            break;
         case "Cauldron ":
             include "view/cauldron.php";
             break;
