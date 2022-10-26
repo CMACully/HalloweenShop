@@ -26,3 +26,11 @@ body, html
   color: white;
   font-weight: 500;
 }
+
+.card 
+{
+    background-color: rgba(173, 173, 173, 0.505);
+    color: var(--light);
+    font-weight: 500;
+    font-size: large;
+}
