@@ -1,6 +1,6 @@
 <form action="#" method="post">
     <input type="hidden" name="action" value="add">
-    <label>Name:</label>
+    <label>Click on an item to view it:</label>
    
     <?php 
         foreach($goodies as $goodie)
@@ -9,5 +9,6 @@
            
         }
     ?>
-    <p><a href="./view/cartview.php">View Cart</a></p>
+    <br>
+    <input type='submit' value='cart' name='action'>
 </form>
