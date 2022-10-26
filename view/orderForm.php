@@ -5,7 +5,8 @@
     <?php 
         foreach($goodies as $goodie)
         {
-            echo("<input class='buttonColor d-grid gap-2 col-4 mx-auto' type='submit' value='${goodie[1]}' name='action'><br>");
+            echo("<input type='submit' value='${goodie[1]}' name='action'>");
+           
         }
     ?>
     <br>
