@@ -24,9 +24,9 @@
             $total = number_format($item['total'], 2);
             $qty = $item['qty'];
             echo($itemname ."-");
-            echo(" Item Quantity: " . $qty);
-            echo(" Item Cost: $".$cost);
-            echo(" Item Subtotal $".$total);
+            echo("<br>Item Quantity: " . $qty);
+            echo("<br>Item Cost: $".$cost);
+            echo("<br>Item Subtotal $".$total);
             echo(" <br><br>");
         }
         echo ("Items Subtotal: $" . getSubtotal());

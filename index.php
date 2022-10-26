@@ -69,7 +69,7 @@ if(empty($_SESSION['cart'])){
                 case "Vampire Latte ":
                     include "view/vampirelatte.php";
                     break;
-                case "cart":
+                case "View Cart":
                     include "view/cartview.php";
                     break;
                 case "emptycart":
