@@ -1,4 +1,7 @@
-<?php
+<form style="max-width:600px; margin: 0 auto; padding-top:25px;" action="." method="post">
+    <div class='card' style='width: 450px; margin: 0 auto;'>
+        <div class='card-body'>
+        <?php
     //print_r($_SESSION);
     
     if(empty($_SESSION['cart']) || $_SESSION['cart'] == 0){
@@ -26,11 +29,16 @@
             echo(" Item Quantity: " . $qty);
             echo(" Item Cost: $".$cost);
             echo(" Item Subtotal $".$total);
-            echo(" <br>");
+            echo(" <br><br>");
         }
         echo ("Items Subtotal: $" . getSubtotal());
     }
-?>
-<button><a href="./index.php?action=default">Add Item</a></button>
-<button><a href="./index.php?action=emptycart">Empty Cart</a></button>
-<button><a href="./index.php?lo=y">Log Out</a></button>
+?><br><br>
+<div style="display: flex; justify-content: center;">
+    <button class="d-grid mx-auto"><a class="atag" href="./index.php?action=default">Add Item</a></button>
+    <button class="d-grid mx-auto"><a class="atag" href="./index.php?action=emptycart">Empty Cart</a></button>
+    <button class="d-grid mx-auto"><a class="atag" href="./index.php?lo=y">Log Out</a></button>
+</div>
+        </div>
+    </div>
+</form>

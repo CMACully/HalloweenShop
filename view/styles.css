@@ -19,13 +19,14 @@ body, html
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(121,9,62,1) 63%, rgba(255,0,0,1) 100%);
     font-weight: 500;
-    color: white;
+    color: var(--light);
+    font-size: large;
 }
 
 .buttonColor
 {
   background-color: darkcyan;
-  color: white;
+  color: var(--white-blue);
   font-weight: 500;
 }
 
@@ -39,18 +40,18 @@ body, html
 
 .atag{
   text-decoration: none;
-  color: white;
+  color: var(--light);
   font-weight: 500;
 }
 
 button 
 {
   background-color: darkcyan;
-  color: white;
+  color: var(--light);
   font-weight: 500;
 }
 
 a:hover
 {
-    color: white;
+    color: var(--light);
 }
