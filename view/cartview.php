@@ -37,7 +37,7 @@
 <div style="display: flex; justify-content: center;">
     <button class="d-grid mx-auto"><a class="atag" href="./index.php?action=default">Add Item</a></button>
     <button class="d-grid mx-auto"><a class="atag" href="./index.php?action=emptycart">Empty Cart</a></button>
-    <button class="d-grid mx-auto"><a class="atag" href="./index.php?lo=y">Log Out</a></button>
+    <button class="d-grid mx-auto"><a class="atag" href="./index.php?lo=y">Place Order</a></button>
 </div>
         </div>
     </div>
