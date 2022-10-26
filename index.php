@@ -1,5 +1,5 @@
 <!--
-  Developer: Chandler Thompson 
+  Developer: Chandler Thompson & Chauntel Atchley Cully
   Project: Halloween Shop
   Date: 10/26/2022
 -->
@@ -30,56 +30,60 @@ if(empty($_SESSION['cart'])){
     <title>Document</title>
 </head>
 <body class="bckgnd">
-<?php
-    
-    include "Model/dbinfo.php";
-    $goodies = getSpoopyItems();
-    include "Model/cartfunctions.php";
-    if($_POST != null){
-        $action = $_POST["action"];
-    }
-    else{
-        $action = "";
-    }
-    
-    //include "view/cauldron.php";
-    switch($action)
-    {
-        case "add":
-            $itemID = filter_input(INPUT_POST, "id");
-            $itemqty = filter_input(INPUT_POST, "itemqty");
-            addItems($itemID, $itemqty);
-            include "view/cartview.php";
-            break;
-        case "Cauldron ":
-            include "view/cauldron.php";
-            break;
-        case "Bonehilda":
-            include "view/bonehilda.php";
-            break;
-        case "Ghost Cookie":
-            include "view/ghostcookie.php";
-            break;
-        case "Witch Soup ":
-            include "view/witchsoup.php";
-            break;
-        case "Vampire Latte ":
-            include "view/vampirelatte.php";
-            break;
-        case "cart":
-            include "view/cartview.php";
-            break;
-        case "emptycart":
-            unset($_SESSION['cart']);
-            include "view/orderForm.php";
-            break;
-        case "Return":
-            include "view/orderForm.php";
-            break;
-        default:
-            include "view/orderForm.php";
+<form style="max-width:600px; margin: 0 auto; padding-top:25px;" action="." method="post">
+    <div class='card' style='width: 450px; margin: 0 auto;'>
+        <div class='card-body'>
+        <?php
+            
+            include "Model/dbinfo.php";
+            $goodies = getSpoopyItems();
+            include "Model/cartfunctions.php";
+            if($_POST != null){
+                $action = $_POST["action"];
+            }
+            else{
+                $action = "";
+            }
+            
+            //include "view/cauldron.php";
+            switch($action)
+            {
+                case "add":
+                    $itemID = filter_input(INPUT_POST, "id");
+                    $itemqty = filter_input(INPUT_POST, "itemqty");
+                    addItems($itemID, $itemqty);
+                    include "view/cartview.php";
+                    break;
+                case "Cauldron ":
+                    include "view/cauldron.php";
+                    break;
+                case "Bonehilda":
+                    include "view/bonehilda.php";
+                    break;
+                case "Ghost Cookie":
+                    include "view/ghostcookie.php";
+                    break;
+                case "Witch Soup ":
+                    include "view/witchsoup.php";
+                    break;
+                case "Vampire Latte ":
+                    include "view/vampirelatte.php";
+                    break;
+                case "cart":
+                    include "view/cartview.php";
+                    break;
+                case "emptycart":
+                    unset($_SESSION['cart']);
+                    include "view/orderForm.php";
+                    break;
+                case "Return":
+                    include "view/orderForm.php";
+                    break;
+                default:
+                    include "view/orderForm.php";
 
-    }
-    
-    
-?>
+            } 
+        ?>
+        </div>
+    </div>
+</form>
