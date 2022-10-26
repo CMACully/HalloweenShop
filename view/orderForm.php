@@ -11,4 +11,5 @@
         
         
     ?>
+    <p><a href="./view/cartview.php">View Cart</a></p>
 </form>
