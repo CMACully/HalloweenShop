@@ -8,7 +8,5 @@
             echo("<input type='submit' value='${goodie[1]}' name='action'>");
            
         }
-        
-        
     ?>
 </form>
