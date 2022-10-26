@@ -26,7 +26,7 @@
             <?php echo(" <input type='hidden' value='$itemID' name='id'>") ?>
             <input type="hidden" value="add" name="action">
             <input type="submit" class="buttonColor d-grid gap-2 col-3 mx-auto" value="Add Item"><br>
-            <button><a href="./index.php?action=default">Add Item</a></button>
+            <button><a class="atag" href="./index.php?action=default">Add Item</a></button>
         </div>
     </div>
 </form>
