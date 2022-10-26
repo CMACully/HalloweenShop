@@ -69,6 +69,9 @@ if(empty($_SESSION['cart'])){
             unset($_SESSION['cart']);
             include "view/orderForm.php";
             break;
+        case "Return To Items":
+            include "view/orderForm.php";
+            break;
         default:
             include "view/orderForm.php";
 
