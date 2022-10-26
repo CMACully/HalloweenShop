@@ -63,6 +63,10 @@ if(empty($_SESSION['cart'])){
         case "Vampire Latte ":
             include "view/vampirelatte.php";
             break;
+        case "emptycart":
+            unset($_SESSION['cart']);
+            include "view/orderForm.php";
+            break;
         default:
             include "view/orderForm.php";
 
