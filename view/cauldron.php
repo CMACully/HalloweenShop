@@ -24,7 +24,7 @@
             </select><br>
             <?php echo(" <input type='hidden' value='$itemID' name='id'>") ?>
             <input type="hidden" value="add" name="action">
-            <input type="submit" value="Add Item">
+            <input type="submit" class="buttonColor" value="Add Item">
         </div>
     </div>
 </form>

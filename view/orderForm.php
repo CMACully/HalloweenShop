@@ -8,8 +8,6 @@
             echo("<input type='submit' value='${goodie[1]}' name='action'>");
            
         }
-        
-        
     ?>
     <p><a href="./view/cartview.php">View Cart</a></p>
 </form>

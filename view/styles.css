@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body, html 
+{
+  height: 100%;
+}
+
+:root 
+{
+    --dark-blue: #396084;
+    --grey-blue: #8aacc8;
+    --light-blue: #bbdefb;
+    --white-blue: #eeffff;
+    --light: #F1F1F1;
+    --shadow: 0 1px 5px rgba(87, 87, 87, 0.8);
+}
+
+.bckgnd 
+{
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(121,9,62,1) 63%, rgba(255,0,0,1) 100%);
+}
+
+.buttonColor
+{
+  background-color: darkcyan;
+  color: white;
+  font-weight: 500;
+}
