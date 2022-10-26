@@ -2,7 +2,6 @@
 session_set_cookie_params(strtotime('+1 years'), '/');
 session_start();
 $logout = filter_input(INPUT_GET, 'lo');
-
 if($logout){
     $_SESSION = [];
         
@@ -28,6 +27,7 @@ if(empty($_SESSION['cart'])){
     
     include "Model/dbinfo.php";
     $goodies = getSpoopyItems();
+    include "Model/cartfunctions.php";
     if($_POST != null){
         $action = $_POST["action"];
     }
@@ -40,6 +40,7 @@ if(empty($_SESSION['cart'])){
     {
         case "add":
             $itemID = filter_input(INPUT_POST, "id");
+            echo("hello");
             $itemqty = filter_input(INPUT_POST, "itemqty");
             addItems($itemID, $itemqty);
             include "view/cartview.php";

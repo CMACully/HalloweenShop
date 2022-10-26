@@ -22,7 +22,7 @@
                 </option>
             <?php endfor; ?>
             </select><br>
-            <input type="hidden" value="<?phpecho($itemID);?>" name="id">
+            <?php echo(" <input type='hidden' value='$itemID' name='id'>") ?>
             <input type="hidden" value="add" name="action">
             <input type="submit" value="Add Item">
         </div>

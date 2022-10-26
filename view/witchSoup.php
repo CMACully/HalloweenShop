@@ -1,4 +1,5 @@
 <?php
+    $itemID = $goodies[2][0];
     $itemName = $goodies[4][1];
     $itemPrice = $goodies[4][2];
     $itemDescription = $goodies[4][3];
@@ -20,4 +21,7 @@
         </option>
     <?php endfor; ?>
     </select><br>
+    <?php echo(" <input type='hidden' value='$itemID' name='id'>") ?>
+    <input type="hidden" value="add" name="action">
+    <input type="submit" value="Add Item">
 </form>
