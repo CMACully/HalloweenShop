@@ -1,3 +1,8 @@
+<!--
+  Developer: Chandler Thompson 
+  Project: Halloween Shop
+  Date: 10/26/2022
+-->
 <?php 
 session_set_cookie_params(strtotime('+1 years'), '/');
 session_start();
@@ -25,7 +30,6 @@ if(empty($_SESSION['cart'])){
     <title>Document</title>
 </head>
 <body class="bckgnd">
-    <a href="index.php">reset</a>
 <?php
     
     include "Model/dbinfo.php";

@@ -31,6 +31,7 @@
         echo ("Items Subtotal: $" . getSubtotal());
     }
 ?>
+<br>
 <button><a class="atag" href="./index.php?action=default">Add Item</a></button>
 <button><a class="atag" href="./index.php?action=emptycart">Empty Cart</a></button>
 <button><a class="atag" href="./index.php?lo=y">Log Out</a></button>
