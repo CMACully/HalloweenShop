@@ -15,12 +15,21 @@
 
     function getSpoopyItems()
     {
-        $myQuery = "select * FROM goodies order by item ASC;";
+        $myQuery = "select * FROM goodies order by item ASC";
         global $db;
         $qry = $db->query($myQuery);       
         $goodies = $qry->fetchAll();
         return $goodies;
     }
 
+    function getSpoopyItem($id) 
+    {
+        global $db;
+        $myQuery = "select * from goodies where ItemID = $id";
+        //echo($sql);
+        $qry = $db->query($myQuery);
+        $rs = $qry->fetch();
+        return $rs;
+    }
     
 ?>

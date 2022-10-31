@@ -4,19 +4,41 @@
   Date: 10/26/2022
 -->
 <?php 
-session_set_cookie_params(strtotime('+1 years'), '/');
-session_start();
-$logout = filter_input(INPUT_GET, 'lo');
-if($logout){
-    $_SESSION = [];
-        
-    // Generate a new session ID
-    session_regenerate_id(true);
-        
-}
-if(empty($_SESSION['cart'])){
-    $_SESSION = array();
-}
+    include "Model/dbinfo.php";
+    session_set_cookie_params(strtotime('+1 years'), '/');
+    session_start();
+    $logout = filter_input(INPUT_GET, 'lo');
+    if($logout){
+        $_SESSION = [];
+            
+        // Generate a new session ID
+        session_regenerate_id(true);
+            
+    }
+    if(empty($_SESSION['cart'])){
+        $_SESSION = array();
+    }
+    
+    $del = filter_input(INPUT_GET, 'del');
+    if ($del)
+    {
+        // Delete Items
+        //$qry = "delete from products where itemId = $del";
+        $qry = "update goodies set active = 0 where itemID = $del";
+        $myQuery = $db->query($qry);
+        //echo($qry);
+    }
+    $itemID = filter_input(INPUT_POST, 'iID');
+    if ($itemID)
+    {
+        // Save changes
+        $item = filter_input(INPUT_POST, 'item');
+        $itemPrice = filter_input(INPUT_POST, 'itemPrice');
+        $myQuery = "update goodies set Item = '$item', Itemprice = $itemPrice where itemID = $itemID";
+        //echo($sql);
+        $qry = $db->query($myQuery);
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +52,12 @@ if(empty($_SESSION['cart'])){
     <title>Document</title>
 </head>
 <body class="bckgnd">
+    <a href='edit.php?id=1'>edit</a>
+    <a href='add.php?'>add</a>
 <form style="max-width:600px; margin: 0 auto; padding-top:25px;" action="." method="post">
     <div class='card' style='width: 450px; margin: 0 auto;'>
         <div class='card-body'>
         <?php
-            
-            include "Model/dbinfo.php";
             $goodies = getSpoopyItems();
             include "Model/cartfunctions.php";
             if($_POST != null){
