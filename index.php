@@ -5,6 +5,7 @@
 -->
 <?php 
     include "Model/dbinfo.php";
+    include "Model/cartfunctions.php";
     session_set_cookie_params(strtotime('+1 years'), '/');
     session_start();
     $logout = filter_input(INPUT_GET, 'lo');
@@ -28,6 +29,20 @@
         $myQuery = $db->query($qry);
         //echo($qry);
     }
+
+    $addItem = filter_input(INPUT_POST, 'addItem');
+    if ($addItem)
+    {
+        // Add Items
+        $item = filter_input(INPUT_POST, 'item');
+        $itemPrice = filter_input(INPUT_POST, 'itemPrice');
+        $itemDesc = filter_input(INPUT_POST, 'itemDesc');
+        $itemImg = filter_input(INPUT_POST, 'itemImg');
+        $myQuery = "INSERT INTO `goodies` (`ItemID`, `Item`, `Itemprice`, `Itemdescription`, `Itemimg`) VALUES (NULL, '$item', $itemPrice, '$itemDesc', '$itemImg')";
+        echo($myQuery);
+        $qry = $db->query($myQuery);
+    }
+
     $itemID = filter_input(INPUT_POST, 'iID');
     if ($itemID)
     {
@@ -35,7 +50,7 @@
         $item = filter_input(INPUT_POST, 'item');
         $itemPrice = filter_input(INPUT_POST, 'itemPrice');
         $myQuery = "update goodies set Item = '$item', Itemprice = $itemPrice where itemID = $itemID";
-        //echo($sql);
+        echo($myQuery);
         $qry = $db->query($myQuery);
     }
 
@@ -59,7 +74,6 @@
         <div class='card-body'>
         <?php
             $goodies = getSpoopyItems();
-            include "Model/cartfunctions.php";
             if($_POST != null){
                 $action = $_POST["action"];
             }
@@ -76,7 +90,7 @@
                     addItems($itemID, $itemqty);
                     include "view/cartview.php";
                     break;
-                case "Cauldron ":
+                case "Cauldron":
                     include "view/cauldron.php";
                     break;
                 case "Bonehilda":
